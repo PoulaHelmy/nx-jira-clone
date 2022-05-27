@@ -1,0 +1,28 @@
+{
+  "root": "apps/ng-jira-clone-e2e",
+  "sourceRoot": "apps/ng-jira-clone-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ng-jira-clone-e2e/cypress.json",
+        "devServerTarget": "ng-jira-clone:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ng-jira-clone:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ng-jira-clone-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ng-jira-clone"]
+}

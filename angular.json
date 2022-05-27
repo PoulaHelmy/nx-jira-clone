@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "ng-jira-clone": "apps/ng-jira-clone",
+    "ng-jira-clone-e2e": "apps/ng-jira-clone-e2e"
+  }
+}
