@@ -17,7 +17,12 @@ See how a minor change to your commit message style can make you a better progra
 ## Example
 
 ```
-feat(configs): 🎸 install code quailty tools
+docs(configs): ✏️ adding commit msg docs
+adding commit msg docs
+
+BREAKING CHANGE: 🧨 no
+
+✅ Closes: #000
 ^--^  ^------------^
 |     |
 |     +-> Summary in present tense.
