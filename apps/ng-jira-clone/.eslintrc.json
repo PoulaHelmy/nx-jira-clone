@@ -50,10 +50,7 @@
     },
     {
       "files": ["*.html"],
-      "extends": [
-        "plugin:@nrwl/nx/angular-template",
-        "plugin:prettier/recommended"
-      ],
+      "extends": ["plugin:@nrwl/nx/angular-template"],
       "rules": {
         // NOTE: WE ARE OVERRIDING THE DEFAULT CONFIG TO ALWAYS SET THE PARSER TO ANGULAR (SEE BELOW)
         "prettier/prettier": [
