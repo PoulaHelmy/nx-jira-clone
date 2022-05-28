@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "lib1": "libs/lib1",
+    "lib2": "libs/lib2",
     "ng-jira-clone": "apps/ng-jira-clone",
     "ng-jira-clone-e2e": "apps/ng-jira-clone-e2e"
   }

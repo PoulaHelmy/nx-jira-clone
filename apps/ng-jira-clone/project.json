@@ -5,7 +5,7 @@
   "prefix": "jira-clone",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@nrwl/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/ng-jira-clone",
@@ -55,7 +55,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@nrwl/web:file-server",
       "configurations": {
         "production": {
           "browserTarget": "ng-jira-clone:build:production"
