@@ -1,27 +1,21 @@
 {
   "projectType": "application",
-  "root": "apps/ng-jira-clone",
-  "sourceRoot": "apps/ng-jira-clone/src",
+  "root": "apps/app2",
+  "sourceRoot": "apps/app2/src",
   "prefix": "jira-clone",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/ng-jira-clone",
-        "index": "apps/ng-jira-clone/src/index.html",
-        "main": "apps/ng-jira-clone/src/main.ts",
-        "polyfills": "apps/ng-jira-clone/src/polyfills.ts",
-        "tsConfig": "apps/ng-jira-clone/tsconfig.app.json",
+        "outputPath": "dist/apps/app2",
+        "index": "apps/app2/src/index.html",
+        "main": "apps/app2/src/main.ts",
+        "polyfills": "apps/app2/src/polyfills.ts",
+        "tsConfig": "apps/app2/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/ng-jira-clone/src/favicon.ico",
-          "apps/ng-jira-clone/src/assets"
-        ],
-        "styles": [
-          "apps/ng-jira-clone/src/styles.scss",
-          "dist/libs/lib3/themes/indigo.css"
-        ],
+        "assets": ["apps/app2/src/favicon.ico", "apps/app2/src/assets"],
+        "styles": ["apps/app2/src/styles.css"],
         "scripts": []
       },
       "configurations": {
@@ -40,8 +34,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/ng-jira-clone/src/environments/environment.ts",
-              "with": "apps/ng-jira-clone/src/environments/environment.prod.ts"
+              "replace": "apps/app2/src/environments/environment.ts",
+              "with": "apps/app2/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -61,10 +55,10 @@
       "executor": "@nrwl/web:file-server",
       "configurations": {
         "production": {
-          "buildTarget": "ng-jira-clone:build:production"
+          "buildTarget": "app2:build:production"
         },
         "development": {
-          "buildTarget": "ng-jira-clone:build:development"
+          "buildTarget": "app2:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,23 +66,20 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-jira-clone:build"
+        "browserTarget": "app2:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/ng-jira-clone/src/**/*.ts",
-          "apps/ng-jira-clone/src/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/app2/src/**/*.ts", "apps/app2/src/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/ng-jira-clone"],
+      "outputs": ["coverage/apps/app2"],
       "options": {
-        "jestConfig": "apps/ng-jira-clone/jest.config.js",
+        "jestConfig": "apps/app2/jest.config.js",
         "passWithNoTests": true
       }
     }

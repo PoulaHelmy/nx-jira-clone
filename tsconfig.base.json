@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-tailwind-nx/lib3": ["libs/lib3/src/index.ts"],
       "@jira-clone/lib1": ["libs/lib1/src/index.ts"],
       "@jira-clone/lib2": ["libs/lib2/src/index.ts"]
     }
